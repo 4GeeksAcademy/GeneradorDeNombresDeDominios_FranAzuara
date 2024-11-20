@@ -20,18 +20,19 @@ window.onload = function() {
         noun[k];
         console.log(pronoun[i] + adj[j] + noun[k]);
         resultados.push(pronoun[i] + adj[j] + noun[k] + extensión);
-
-        for (let l = 0; l < resultados.length; l++) {
-          let lista = document.createElement("li");
-          let dominio = resultados[l];
-          resultado.appendChild(dominio);
-          let resultadofinal = document.getElementById("resultado");
-          document.body.insertBefore(lista, resultadofinal);
-        }
       }
     }
   }
   console.log(resultados);
+
+  let resultadofinal = document.getElementById("resultado");
+
+  for (let l = 0; l < resultados.length; l++) {
+    let dominio = resultados[l];
+    let lista = document.createElement("li");
+    lista.innerText = dominio;
+    resultadofinal.appendChild(lista);
+  }
 
   //let resultadofinal = document.getElementById("resultado");
   //console.log(resultadofinal);
